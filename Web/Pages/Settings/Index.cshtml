@@ -18,7 +18,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <!-- TODO: Why does validation not work when using editor tag helper? -->
-                                <editor for="SystemSettings.EmailFromAddress" />
+                                <editor asp-for="SystemSettings.EmailFromAddress" />
                                 @*@Html.EditorFor(x => x.SystemSettings.EmailFromAddress)*@
                             </div>
                         </div>
