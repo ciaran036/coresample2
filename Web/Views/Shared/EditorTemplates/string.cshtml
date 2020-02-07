@@ -1,0 +1,10 @@
+﻿@model string
+<div class="form-group">
+    <label asp-for="@Model" class="m-b-none"></label>
+    <span asp-description-for="@Model" class="help-block m-b-none small m-t-none"></span>
+    <div class="input-group">
+        <input asp-for="@Model" class="form-control" />@*<vc:text-box></vc:text-box>*@
+        <partial name="_ValidationIcon" />
+    </div>
+    <span asp-validation-for="@Model" class="validation-message"></span>
+</div>

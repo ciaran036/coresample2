@@ -1,0 +1,42 @@
+﻿@page
+@model Web.Pages.Settings.IndexModel
+@{
+    ViewBag.Title = "Settings";
+}
+
+<partial name="Shared/_PageHeader" />
+
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+    <div class="row">
+        <div class="col-12">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h5>System Settings</h5>
+                </div>
+                <div class="ibox-content">
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- TODO: Why does validation not work when using editor tag helper? -->
+                                <editor for="SystemSettings.EmailFromAddress" />
+                                @*<editor asp-for="SystsemSettings.EmailFromAddress" />*@
+                                @*<div asp-editor-for="@Model.SystemSettings.EmailFromAddress"></div>*@
+
+                                @*@Html.EditorFor(x => x.SystemSettings.EmailFromAddress)*@
+
+                                @*<text-box asp-for="SystemSettings.EmailFromAddress"></text-box>
+
+                                <partial for="@Model.SystemSettings.EmailFromAddress"></partial>*@
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <submit-button title="Save"></submit-button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
